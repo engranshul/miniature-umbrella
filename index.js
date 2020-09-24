@@ -7,21 +7,16 @@ const monk = require('monk');
 const rateLimit = require('express-rate-limit');
 const slowDown = require('express-slow-down');
 const { nanoid } = require('nanoid');
-
 require('dotenv').config();
-
-const db = monk(process.env.MONGODB_URI);
+const db = monk("mongodb+srv://dummy:passwordofdummy@cluster0.z8erp.mongodb.net/shipwrecks?retryWrites=true&w=majority");
 const urls = db.get('urls');
 urls.createIndex({ slug: 1 }, { unique: true });
-
 const app = express();
 app.enable('trust proxy');
-
 app.use(helmet());
 app.use(morgan('common'));
 app.use(express.json());
 app.use(express.static('./public'));
-
 const notFoundPath = path.join(__dirname, 'public/404.html');
 
 app.get('/:id', async (req, res, next) => {
