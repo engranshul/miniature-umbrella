@@ -51,26 +51,26 @@ Rate limiting could (should!) be applied on Layer 4 as well (Layer 4 means block
 
 
 ### notes while taking course
-npm init -y
-npm i express yup monk helmet morgan cors dotenv nodemon nanoid
-require is used in Nodejs
-app.get
-app.listen
-const port = process.env.port || 1337
-scripts creation in package.json concept
-setup static folder using express
-"* {
-margin : 0
-padding : 0
-box-sizing : border-box
-}"
-npm now config ...check it out
-netlify..horoku...aws...hosting providers
-namecheap.com : // update cname
-
-creating schema using yup
-using mock to connect wd mongo database
-creating index on mongo using node
-make index using in mongo
-JSON.stringify
-async await used together
+* npm init -y
+* npm i express yup monk helmet morgan cors dotenv nodemon nanoid
+* require is used in Nodejs
+* app.get
+* app.listen
+* const port = process.env.port || 1337
+* scripts creation in package.json concept
+* setup static folder using express
+* css reset setting to do at start of project
+  "* {
+  margin : 0
+  padding : 0
+  box-sizing : border-box
+  }"
+* npm now config ...check it out
+* netlify..horoku...aws...hosting providers
+* namecheap.com : // update cname
+* creating schema using yup
+* using mock to connect wd mongo database
+* creating index on mongo using node
+* make index use in mongo
+* JSON.stringify
+* async await used together
