@@ -8,7 +8,7 @@ const rateLimit = require('express-rate-limit');
 const slowDown = require('express-slow-down');
 const { nanoid } = require('nanoid');
 require('dotenv').config();
-const db = monk("mongodb+srv://dummy:passwordofdummy@cluster0.z8erp.mongodb.net/shipwrecks?retryWrites=true&w=majority");
+const db = monk("..PROVIDE MONGO DB URL HERE....");
 const urls = db.get('urls');
 urls.createIndex({ slug: 1 }, { unique: true });
 const app = express();
